@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>potfolio website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <meta name="viewport",content="width-device-width, initial-scale=1.0">
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+             box-sizing:border-box ;
+            font-family: 'poppins',sans-serif;
+            background-color:transparent;
+            
+        }
+        .protfolio-container{
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+        }
+        .navlist{
+            display: flex;
+            gap: 3.5em;
+            height: 15vh;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+        }
+        .navlist li{
+            list-style: none;
+        }
+        .navlist li a{
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 20px;
+            color:rgb(0, 244, 227);
+        }
+        .navlist li a:hover{
+            cursor: pointer;
+         background-color:red;
+        -webkit-background-clip:text;
+        -webkit-text-fill-color:transparent;
+        text-shadow: 0 0 5px rgb(242, 15, 15),
+        0 0 25px rgb(235, 11, 11),0 0 50px rgb(229, 17, 17),
+        0 0 100px rgb(234, 10, 10),0 0 200px rgb(240, 9, 9);
+        background-color: red;
+        }
+        .left-container,.right-container{
+             height: 100vh;
+             display: flex;
+             align-items: center;
+        }
+        .left-container{
+           background: #262525;
+           width: 70%;
+           padding-left: 3rem;
+        }
+        .right-container{
+           background:rgb(5, 55, 46);
+           width:30%;
+        }
+        .icons .fa-brands{
+         color: aqua;
+         font-size: 1.8rem;
+         
+        }
+        .icons{
+            display: flex;
+            flex-direction:column;
+            justify-content: center;
+            align-items: center;
+            gap:3rem;
+        }
+        .content{
+            margin-left: 3rem;
+        }
+        .content h2{
+            font-size: 1.5rem;
+            color:white;
+        }
+        .content h1{
+            font-size: 2.5rem;
+            color: rgb(41, 255, 255);
+        }
+        .content h1:hover{  
+            text-shadow:  0 0 5px cyan,
+        0 0 25px cyan,0 0 50px cyan,
+        0 0 100px cyan,0 0 200px cyan;
+        cursor: pointer;
+        -webkit-background-clip:text;
+        
+        }
+        .content p{
+            color: aliceblue;
+            max-width: 38rem;
+            margin:1.1rem 1.5rem  1rem 0;
+            line-height: 1.9rem;
+        }
+        .btn-container button{
+            border:dimgray;
+            border-style: double;
+            font-size: 10px;
+            color: rgb(255, 255, 255);
+            padding: .8rem 1.5rem ;
+            border-radius:1rem;
+            background-color:transparent;
+            margin-left: 1rem;
+            cursor: pointer;
+            transition:.5s ease-in-out;
+        }
+        button:nth-child(1):hover{
+            box-shadow: 0 0 5px cyan,
+        0 0 25px cyan,0 0 50px cyan,
+        0 0 100px cyan,0 0 200px cyan;
+        background-color: aqua;
+        }
+        button:nth-child(2):hover{
+            box-shadow: 0 0 5px rgb(242, 15, 15),
+        0 0 25px rgb(235, 11, 11),0 0 50px rgb(229, 17, 17),
+        0 0 100px rgb(234, 10, 10),0 0 200px rgb(240, 9, 9);
+        background-color: red;
+        }
+        .icons .fa-brands:hover{
+            cursor: pointer;
+         background-color:red;
+        -webkit-background-clip:text;
+        -webkit-text-fill-color:transparent;
+        }
+       .design .circle{
+           aspect-ratio: 1;
+           position: absolute;
+           border-radius: 50%;
+           top: 50%;
+           left: 70%;
+           transform: translate(-50%,-50%);
+           display: flex;
+       }
+       .circle:nth-child(1){
+        background:linear-gradient(90deg ,rgb(52, 53, 53) 50%, transparent 50%);
+        width: 30rem;
+       }
+        .circle:nth-child(2){
+            background-image: url(file:///D:/img/New%20Folder/1674641458830_1686123905755.jpg);
+            width: 25rem;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            box-shadow: 
+            0 0 5rem rgb(23, 252, 229),
+            inset 0 0 1rem rgb(0, 238, 238)
+            ,0 0 2rem rgb(7, 176, 151)
+            ;
+        }
+        .navlist li a::after{
+            content: "";
+            position: absolute;
+            background: white;
+            height: .1rem;
+            left: 0;
+            bottom: -5px;
+            transform: scaleX(0);
+            transition: transform .5sec;
+        }
+        .navlist li a:hover::after{
+            transform: scaleX(1);
+        }
+     #about{
+        padding: 50px 0;
+        color: darkcyan;
+        
+     }
+     .row{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+     }
+     .about-col-1{
+        flex-basis: 35%;
+
+     }
+     .about-col-1, img{
+        width: 50%;
+        border-radius: 15px;
+     }
+     .about{
+        
+     }
+     *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'poppins',sans-serif;
+        background: fixed;
+        max-width: 100%;
+    }
+    .container{
+        min-height: 100vh;
+        background:  #262525;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background:black;
+        width: 100%;
+        
+
+    }
+    .container form{
+        width: 670px; 
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        box-shadow: 5px 5px 30px rgb(23, 245, 245);
+         border-radius: 15px;
+         background: rgba(48, 32, 32, 0.322);
+         flex-wrap: wrap;
+         backdrop-filter: blur(5px);
+
+            }
+    .container form h1{
+        color:rgb(9, 255, 214);
+        font-weight: 500px;
+        margin-top: 20px;
+        width: 500px;
+        text-align: center;
+    }        
+    .container form input{
+        width: 290px;
+        height: 40px;
+        padding-left: 10px;
+        outline: none;
+        border: none;
+        font-size: 15px;
+        margin-bottom: 10px;
+        background: none;
+        border-bottom: 2px solid white;
+
+    }
+    .container form input::placeholder{
+        color:rgb(9, 255, 214);
+    }
+    .container form #lastname,
+    .container form #mobile{
+        margin-left: 20px;
+        color: rgb(9, 255, 214);
+    }
+    .container form h4{
+        color:rgb(9, 255, 214);
+        font-weight: 300;
+        width: 600px;
+        margin-top: 20px;
+
+    }
+    .container form textarea{
+        background:none ;
+        border: none;
+        border-bottom: 2px solid white;
+        color: aliceblue;
+        font-weight: 200;
+        font-size: 15px;
+        padding: 10px;  
+        outline: none;
+        min-width: 600px;
+        max-width: 600px;
+        min-height: 80px;
+        max-height: 80px;
+          }
+          textarea::-webkit-scrollbar{
+            width: 1em;
+          }
+          textarea::-webkit-scrollbar.thumb{
+            background-color: rgb(255, 255, 255);
+          }
+          .container form #Button{
+            border-style:unset;
+            background: transparent;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-weight: 600;
+            font-size: 20px;
+            color:rgb(9, 255, 214);
+            width: 100px;
+            padding: 0;
+            margin-right: 500px;
+            margin-bottom: 30px;
+            transition: 0.5s;
+
+          }
+          .container form #Button:hover{
+            opacity: 0.7s;
+            box-shadow: 
+            0 0 5rem rgb(23, 252, 229),
+            inset 0 0 1rem rgb(0, 238, 238)
+            ,0 0 2rem rgb(7, 176, 151) ;
+            text-shadow:  0 0 5rem rgb(23, 252, 229),
+            inset 0 0 1rem rgb(0, 238, 238)
+            ,0 0 2rem rgb(7, 176, 151) ;
+            cursor: pointer;
+          }
+          .container form #firstname,
+          .container form #email{
+            color: aliceblue;
+          }
+          @media only screen and (max-width:800px){
+      .container {
+      background: black;
+      align-items: center;
+      }
+      .img{
+         size: 200px;
+      }
+    }
+    *{
+          padding: 0;
+          margin: 0;
+          font-family:'poppins',sans-serif;
+          box-sizing: border-box;
+          
+        }
+        .container1{
+        min-height: 100vh;
+        background: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgb(5, 55, 46);;
+        width: 100%;
+    }
+     .about{
+    width: 100%;
+    padding: 78px 0px;
+   
+     }
+     .about img{
+        height: auto;
+        width: 400px;
+        border-radius: 5%;
+
+     }
+     .about-text{
+        width: 550px;
+     }
+     .main{
+        width: 1130px;
+        max-width: 95%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+     }
+     .about-text h1{
+        color: rgb(10, 225, 193);
+        font-size: 80px;
+        text-transform: capitalize;
+        margin-bottom: 20px;
+     }
+     .about-text h3{
+        color: rgb(255, 255, 255);
+        font-size: 15px;
+        text-transform: capitalize;
+        margin-bottom: 25px;
+        letter-spacing: 2px;
+        
+     }
+     p{
+        color: burlywood;
+        font-size: 20px;
+        padding:10px
+     }
+     span{
+        color: red;
+     }
+     button{
+        background-color: rgb(0, 221, 255);
+        color: white;
+        text-decoration: none;
+        border: 2px solid transparent;
+        font-weight: bold;
+        padding: 10px 20px;
+        border-radius: 30px;
+        
+     }
+     .about img:hover{
+        
+        box-shadow: 
+        0 0 5px cyan,
+        0 0 25px cyan,0 0 50px cyan,
+        0 0 100px cyan,0 0 200px cyan;
+     }
+     button:hover{
+        cursor: pointer;
+        box-shadow: 
+        0 0 5px cyan,
+        0 0 25px cyan,0 0 50px cyan,
+        0 0 100px cyan,0 0 200px cyan;
+     }
+     h1:hover{
+     text-shadow:  0 0 5px cyan,
+        0 0 25px cyan,0 0 50px cyan,
+        0 0 100px cyan,0 0 200px cyan;
+     }
+    @media only screen and (max-width:800px){
+      .container1 {
+      display: block;
+      background: black;
+      }
+      .img{
+         size: 200px;
+      }
+    }
+    </style>
+</head>
+<body>
+    <div class="protfolio-container">
+        <ul class="navlist">
+            <li><a href="file:///C:/Users/affan%20akram/OneDrive/Documents/affan%20portofolio%20%232.html">HOME</a></li>
+            <li><a href="#">WORK</a></li>
+            <li><a href="file:///C:/Users/affan%20akram/OneDrive/Documents/about%20.html">ABOUT</a></li>
+            <li><a href="#">PROJECT</a></li>
+            <li><a href="file:///C:/Users/affan%20akram/OneDrive/Documents/contact%20form.html">CONTACT</a></li>
+        </ul>
+         <div class="left-container">
+         <div class="icons">
+            <a href="https://www.instagram.com/_mr_affan_x?igsh=MXRsMHVnbW5kM2l6dA%3D%3D">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+           <a href="https://www.facebook.com/affan.akram.982" >
+            <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://www.youtube.com/@THEMOVIEMIRROR" >
+            <i class="fa-brands fa-youtube"></i>
+        </a>
+            <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" >
+            <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+         </div>
+         <div class="content">
+           <h2>Hello it's Me Affan Akram and i am</h2>
+           <h1> WEB DEVELOPER</h1>
+           <P> with extensive experience for 6 month.
+           Exoerience is to create and website design,frontend design,and moany more....</p>
+           <div class="btn-container">
+            <button><B> View project </B></button>
+            <a href="file:///C:/Users/affan%20akram/AppData/Local/Microsoft/Windows/INetCache/IE/PWMQIZ9R/AffanAkramResume%20(3)_copy[1].pdf" target="blank">
+            <button><B> Resume </B></button>
+        </a>
+          </div>
+        </div>
+    </div>  
+         <div class="right-container"></div>
+       <div class="design">
+           <div class="circle"></div>
+           <div class="circle"></div>
+       </div>
+   </div>
+   <div class="container1">
+    <section class="about">
+        <div class="main">
+            <img src="file:///C:/Users/affan%20akram/OneDrive/Documents/IMG_20240825_234737.jpg">
+        <div class="about-text">
+            <h1>ABOUT US</h1>
+        <H3>DEVELOPER<span> & DESIGNER</span></H3>
+         <P>
+           I AM a front-end web developer.i can provide clean code and pixel perfect design. also make the website more AND MORE INTERACTIVE WITH WEB ANIMATION. I CAN ALSO MAKE THE WEBSITE MORE CODE AND PIXEL PERFECT DESIGN.A RESPOSIVE DESIGN MAKES YOUR WEBSITE ACCESSIBLE TO ALL USERS.REGARDLESS OD THEIR DEVICE..
+         </P>
+         <button type="button">let's talk</button>
+    </div>
+   </div>
+</div>
+   <div class="container">
+    <form>
+      <h1>Contact Us Form</h1>
+      <input type="text" id="firstname" placeholder="First Name" required>
+      <input type="text" id="lastname" placeholder="Last Name" required>
+      <input type="email"  id="email" placeholder="E-mail" required>
+      <input type="mobile" id="mobile" placeholder="Mobile no" required>
+      <h4>Type your Message Here</h4>
+      <textarea required></textarea>
+      <input type="submit" value="send" id="Button">
+    </form>
+  </div>
+ 
+</section>
+</body>
+</html>
